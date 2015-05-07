@@ -1,6 +1,7 @@
 #Impute F2 genotypes based on parents' genotypes
 
 This is currently only for F2 populations.
+
      (1) each chromosome is imputed separately
      (2) If parents are the same for that marker, marker is imputed as the parent gentoype
      (3) if there is only one marker in the chromsome, it is imputed as the mode genotype
