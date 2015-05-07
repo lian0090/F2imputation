@@ -9,6 +9,14 @@ This is currently only for F2 populations.
      (5) for (3) and (4), if the mode genotype is NA, marker is not imputed, and the marker is removed from the final imputed data.
      (6) All other situations are imputed based on conditional distribution of flanking markers
 
+##Install
+F2imputation is not available on [CRAN](http://cran.r-project.org/) yet. However, it can be installed directly from GitHub using the [devtools](https://github.com/hadley/devtools) package.
+
+1. Install `devtools` package: `install.packages('devtools')`
+2. Load `devtools` package: `library(devtools)`
+3. Install `BGData` package from GitHub: `install_github('lian0090/F2imputation')`
+4. Load `SKAT2` package: `library(F2imputation)`
+
 
 ##Example
 ```R
