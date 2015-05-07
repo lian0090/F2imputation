@@ -1,0 +1,16 @@
+imputation_pm<-
+function(progenygeno,genotypes,map,...){
+ n_pos=ncol(progenygeno)
+ n_ind=nrow(progenygeno)
+ progenygeno=as.integer(as.matrix(progenygeno))
+ genotypes=as.integer(genotypes) 
+ n_genotype=as.integer(length(genotypes))
+ map=as.double(map)
+ genoprob=as.double(array(0,dim=c(n_ind,n_pos,n_genotype)))
+ naind=as.integer(rep(NA,n_ind))
+output=.C("imputation",progenygeno=progenygeno,genotypes,n_genotype,n_pos,n_ind,map,genoprob=genoprob,naind=naind,NAOK=T,PACKAGE="F2imputation")
+progenygeno=matrix(output$progenygeno,nrow=n_ind,byrow=F)
+genoprob=array(output$genoprob,dim=c(n_ind,n_pos,n_genotype))
+naind=(output$naind)
+return(list(progenygeno=progenygeno,genoprob=genoprob,naind=naind[!is.na(naind)]))
+}

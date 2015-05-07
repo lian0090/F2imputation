@@ -1,0 +1,5 @@
+#dynamic loading the F2imputation package
+useDynLib(F2imputation)
+#exported R functions
+#export(calc_genoprob,imputation,predict_genoprob,recodegeno_IBD,recodegeno_IBDtoOri,recodegeno)
+exportPattern(".")
