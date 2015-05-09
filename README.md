@@ -37,3 +37,37 @@ data(progeno)
 data(pargeno)
 out=imputation(progeno,pargeno,map,nColSkip=1)
 ```
+
+##Compatability with old version
+Imputation with input format `combinedgeno`
+`imputation.cmbgeno(combinedgeno)`
+- arguments
+    -`combinedgeno`: a matrix or data.frame combined the map information, parents genotype and progeny genotype. Entries of cmobinedgeno are `character` types so that all the information can be put together into a single matrix. Marker genotypes must be coded as -1, 0, 1. 
+          - column 1 is LINE names, first two rows of column 1 are NA. 
+          - row 1 is chrosomes number
+          - row 2 is genetic distance 
+          - row 3 and row 4 are marker genotype for the two parents
+          - row 5 onwards are the progeny genotypes
+
+
+- Return Values
+    - `pimputedgeno`: a dataframe of imputed genotypes  
+    - `genoprob`: an array of genotype probabilities
+- R code comparing the old version and new version
+
+```R
+data(combinedgeno)
+outcmb=imputation.cmbgeno(combinedgeno)
+outcmb.geno=outcmb$pimputedgeno[-c(1:4),]
+outcmb.prob=outcmb$genoprob
+data(progeno)
+data(pargeno)
+data(map)
+out=imputation(progeno,pargeno,map,nColSkip=1,IDcol=NULL)
+out.geno=out$pimputedgeno
+out.prob=out$genoprob
+all(out.geno==outcmb.geno)
+all(out.prob==outcmb.prob)
+```
+
+
