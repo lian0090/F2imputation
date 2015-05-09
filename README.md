@@ -17,7 +17,7 @@ F2imputation is not available on [CRAN](http://cran.r-project.org/) yet. However
 3. Install `BGData` package from GitHub: `install_github('lian0090/F2imputation')`
 4. Load `SKAT2` package: `library(F2imputation)`
 
-##Main function
+##Usage
 `imputation(progeno,pargeno,map,nColSkip)`
 - Arguments
     - `progeno`: progenty genotype, each row is an individual, the 1:nColSkip columns can be pedigree information, marker names must be in column names. genotypes must be coded in -1,0,1
@@ -26,7 +26,7 @@ F2imputation is not available on [CRAN](http://cran.r-project.org/) yet. However
     - `nColSkip`: number of columns to skip before the first marker genotype  
     - `IDcol`: column number for LINE ID, if specified, the LINE IDs will be added to the dimnames of genotype probability array. 
 
--Return Values
+- Return Values
     - `pimputedgeno`: a dataframe of imputed genotypes  
     - `genoprob`: an array of genotype probabilities
 ##Example
