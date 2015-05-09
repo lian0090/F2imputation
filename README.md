@@ -19,14 +19,16 @@ F2imputation is not available on [CRAN](http://cran.r-project.org/) yet. However
 
 ##Main function
 `imputation(progeno,pargeno,map,nColSkip)`
--Arguments
-    -`progeno`: progenty genotype, each row is an individual, the 1:nColSkip columns can be pedigree information, marker names must be in column names. genotypes must be coded in -1,0,1
-    -`pargeno`: parent genotype, each row is an individual, the 1:nColSkip columns can be  pedigree information, marker names must be in column names. genotypes must be coded in -1,0,1
-    -`map`: each row of map describes a single marker and must contain 3 columns: chromosome, SNPid, Genetic distance (cM)
-    -`nColSkip`: number of columns to skip before the first marker genotype  
-    -`IDcol`: column number for LINE ID, if specified, the LINE IDs will be added to the dimnames of genotype probability array. -Return Values
-    -`pimputedgeno`: a dataframe of imputed genotypes  
-    -`genoprob`: an array of genotype probabilities
+- Arguments
+    - `progeno`: progenty genotype, each row is an individual, the 1:nColSkip columns can be pedigree information, marker names must be in column names. genotypes must be coded in -1,0,1
+    - `pargeno`: parent genotype, each row is an individual, the 1:nColSkip columns can be  pedigree information, marker names must be in column names. genotypes must be coded in -1,0,1
+    - `map`: each row of map describes a single marker and must contain 3 columns: chromosome, SNPid, Genetic distance (cM)
+    - `nColSkip`: number of columns to skip before the first marker genotype  
+    - `IDcol`: column number for LINE ID, if specified, the LINE IDs will be added to the dimnames of genotype probability array. 
+
+-Return Values
+    - `pimputedgeno`: a dataframe of imputed genotypes  
+    - `genoprob`: an array of genotype probabilities
 ##Example
 ```R
 data(map)
