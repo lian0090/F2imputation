@@ -29,6 +29,7 @@ F2imputation is not available on [CRAN](http://cran.r-project.org/) yet. However
 - Return Values
     - `pimputedgeno`: a dataframe of imputed genotypes  
     - `genoprob`: an array of genotype probabilities
+
 ##Example
 ```R
 data(map)
