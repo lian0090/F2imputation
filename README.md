@@ -39,7 +39,6 @@ out=imputation(progeno,pargeno,map,nColSkip=1)
 ```
 
 ##Compatability with old version
-Imputation with input format `combinedgeno`
 `imputation.cmbgeno(combinedgeno)`
 - arguments
     -`combinedgeno`: a matrix or data.frame combined the map information, parents genotype and progeny genotype. Entries of cmobinedgeno are `character` types so that all the information can be put together into a single matrix. Marker genotypes must be coded as -1, 0, 1. 
