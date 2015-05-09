@@ -19,6 +19,7 @@ F2imputation is not available on [CRAN](http://cran.r-project.org/) yet. However
 
 ##Usage
 `imputation(progeno,pargeno,map,nColSkip)`
+
 - Arguments
     - `progeno`: progenty genotype, each row is an individual, the 1:nColSkip columns can be pedigree information, marker names must be in column names. genotypes must be coded in -1,0,1
     - `pargeno`: parent genotype, each row is an individual, the 1:nColSkip columns can be  pedigree information, marker names must be in column names. genotypes must be coded in -1,0,1
