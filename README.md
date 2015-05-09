@@ -16,6 +16,7 @@ F2imputation is not available on [CRAN](http://cran.r-project.org/) yet. However
 2. Load `devtools` package: `library(devtools)`
 3. Install `BGData` package from GitHub: `install_github('lian0090/F2imputation')`
 4. Load `SKAT2` package: `library(F2imputation)`
+
 ##Main function
 `imputation(progeno,pargeno,map,nColSkip)`
 -Arguments
