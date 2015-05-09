@@ -21,7 +21,7 @@ F2imputation is not available on [CRAN](http://cran.r-project.org/) yet. However
 `imputation(progeno,pargeno,map,nColSkip)`
 
 - Arguments
-    - `progeno` and `pargeno`: typed markers of progenty genotypes (`progeno`) and parents genotypes (`pargeno`). Each row is an individual and there should be only two rows for `pargeno` for the two parents.  The 1:nColSkip columns can be pedigree information, marker names must be in column names. Genotypes must be coded in -1,0,1. For example, if progeny are only genotyped for M1, M3, and parents are genotyped for M1, M2, M3, M4, M5. If ID is included in the genotype, then, progeno will have three columns with column names ID, M1, M3. Pargeno will have six columns with column names ID, M1, M2, M3, M4, M5. 
+    - `progeno` and `pargeno`: typed markers of F2 progeny genotypes (`progeno`) and parents genotypes (`pargeno`). Each row is an individual and there should be only two rows for `pargeno` for the two parents.  The `1:nColSkip` columns can be pedigree information. Marker names must be in column names. Genotypes must be coded in `-1,0,1`. For example, if progeny are only genotyped for `M1`, `M3`, and parents are genotyped for `M1`, `M2`, `M3`, `M4`, `M5`. If ID is included in the genotype, then, `progeno` will have three columns with column names `ID`, `M1`, `M3`. `pargeno` will have six columns with column names `ID`, `M1`, `M2`, `M3`, `M4`, `M5`. 
     - `map`: each row of map describes a single marker and must contain 3 columns: chromosome, SNPid, Genetic distance (cM)
     - `nColSkip`: number of columns to skip before the first marker genotype  
     - `IDcol`: column number for LINE ID, if specified, the LINE IDs will be added to the dimnames of genotype probability array. 
